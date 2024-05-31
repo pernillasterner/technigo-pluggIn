@@ -13,7 +13,7 @@ export const Header = () => {
           <Link to={`/play`}>
             <Play>Play</Play>
           </Link>
-          <Link to={`/myprogress`}>
+          <Link to={`/progress`}>
             <MyProgress>Min progress</MyProgress>
           </Link>
           <SignOut>
