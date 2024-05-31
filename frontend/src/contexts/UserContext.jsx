@@ -16,7 +16,7 @@ export const UserProvider = ({ children }) => {
     try {
       // Ensure this points to the correct backend URL
       const response = await fetch(
-        "https://technigo-project-auth.onrender.com/sessions",
+        "https://technigo-pluggin.onrender.com/sessions",
         {
           method: "POST",
           headers: {
@@ -60,7 +60,7 @@ export const UserProvider = ({ children }) => {
     try {
       // Ensure this points to the correct backend URL
       const response = await fetch(
-        "https://technigo-project-auth.onrender.com/users",
+        "https://technigo-pluggin.onrender.com/users",
         {
           method: "POST",
           headers: {
