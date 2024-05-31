@@ -40,7 +40,7 @@ export const Play = () => {
     getContent();
   }, []);
 
-  if (!isLoggedIn) {
+  if (isLoggedIn) {
     return (
       <PlayContainer>
         <PlayTitle>
