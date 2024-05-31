@@ -13,8 +13,8 @@ const routes = (
     {/* <Route path="/" element={<Login />} /> */}
     {/* Define a route for the '/home' path that renders the 'Home' component. */}
     <Route path="/" element={<Home />} />
-    <Route path="/register" element={<RegistrationForm />} />
-    <Route path="/login" element={<Login />} />
+    <Route path="/registering" element={<RegistrationForm />} />
+    <Route path="/logga-in" element={<Login />} />
     {/* Define a catch-all route that matches any other path ('*') and renders the 'NotFound' component. */}
     <Route path="*" element={<NotFound />} />
   </>

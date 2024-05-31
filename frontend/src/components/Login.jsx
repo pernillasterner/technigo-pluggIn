@@ -24,12 +24,12 @@ export const Login = () => {
   return (
     <LoginContainer>
       <Form onSubmit={handleSubmit}>
-        <Heading>Login</Heading>
+        <Heading>Logga in</Heading>
         {error && <Error>{error}</Error>}
         <label className="username">
           <Input
             type="text"
-            placeholder="Username"
+            placeholder="Användarnamn"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
@@ -38,14 +38,14 @@ export const Login = () => {
         <label className="password">
           <Input
             type="password"
-            placeholder="Password"
+            placeholder="Lösenord"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
         </label>
         <Button type="submit" className="loginBtn">
-          Log in
+          Logga in
         </Button>
       </Form>
     </LoginContainer>

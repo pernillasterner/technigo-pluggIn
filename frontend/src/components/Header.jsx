@@ -14,10 +14,10 @@ export const Header = () => {
             <Play>Play</Play>
           </Link>
           <Link to={`/myprogress`}>
-            <MyProgress>My progress</MyProgress>
+            <MyProgress>Min progress</MyProgress>
           </Link>
           <SignOut>
-            <SignOutText onClick={signout}>Sign out</SignOutText>
+            <SignOutText onClick={signout}>Logga ut</SignOutText>
             <SignOutIcon onClick={signout} src={signoutIcon} />
           </SignOut>
         </LoggedIn>
@@ -27,11 +27,11 @@ export const Header = () => {
     return (
       <HeaderContainer>
         <StartPage className="startPage">
-          <Link to={`/register`}>
-            <Register>Register here</Register>
+          <Link to={`/registering`}>
+            <Register>Registera dig</Register>
           </Link>
-          <Link to={`/login`}>
-            <Login>Log in</Login>
+          <Link to={`/logga-in`}>
+            <Login>Logga in</Login>
           </Link>
         </StartPage>
       </HeaderContainer>
