@@ -12,17 +12,13 @@ export const Play = () => {
     const accessToken = localStorage.getItem("accessToken");
     try {
       // Ensure this points to the correct backend URL
-      const response = await fetch(
-        `${renderUrl}/games`,
-        // "https://technigo-pluggin.onrender.com/games",
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: accessToken,
-          },
-        }
-      );
+      const response = await fetch(`${renderUrl}/games`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: accessToken,
+        },
+      });
       console.log(response);
       if (!response.ok) {
         setIsLoggedIn(false);

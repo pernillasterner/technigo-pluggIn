@@ -16,17 +16,13 @@ export const UserProvider = ({ children }) => {
   const login = async (loginData, accessToken) => {
     try {
       // Ensure this points to the correct backend URL
-      const response = await fetch(
-        `${renderUrl}/sessions`,
-        // "https://technigo-pluggin.onrender.com/sessions",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(loginData),
-        }
-      );
+      const response = await fetch(`${renderUrl}/sessions`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(loginData),
+      });
       if (!response.ok) {
         console.log("Login failed");
         throw new Error("Failed to get user");
@@ -61,17 +57,13 @@ export const UserProvider = ({ children }) => {
   const registerUser = async (userData) => {
     try {
       // Ensure this points to the correct backend URL
-      const response = await fetch(
-        `${renderUrl}/users`,
-        // "https://technigo-pluggin.onrender.com/users",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(userData),
-        }
-      );
+      const response = await fetch(`${renderUrl}/users`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      });
       if (!response.ok) {
         throw new Error("Failed to register user");
       }
