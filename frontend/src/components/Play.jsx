@@ -5,6 +5,7 @@ import { useLogin } from "../contexts/UserContext";
 
 export const Play = () => {
   const { isLoggedIn, setIsLoggedIn } = useLogin();
+  const renderUrl = import.meta.env.VITE_RENDER_API || "http://localhost:3000";
   let message = "";
 
   const getContent = async () => {
@@ -12,7 +13,8 @@ export const Play = () => {
     try {
       // Ensure this points to the correct backend URL
       const response = await fetch(
-        "https://technigo-pluggin.onrender.com/games",
+        `${renderUrl}/games`,
+        // "https://technigo-pluggin.onrender.com/games",
         {
           method: "GET",
           headers: {

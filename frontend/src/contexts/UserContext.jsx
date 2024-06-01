@@ -11,12 +11,14 @@ export const UserProvider = ({ children }) => {
     auth: false,
   });
   const navigate = useNavigate();
+  const renderUrl = import.meta.env.VITE_RENDER_API || "http://localhost:3000";
 
   const login = async (loginData, accessToken) => {
     try {
       // Ensure this points to the correct backend URL
       const response = await fetch(
-        "https://technigo-pluggin.onrender.com/sessions",
+        `${renderUrl}/sessions`,
+        // "https://technigo-pluggin.onrender.com/sessions",
         {
           method: "POST",
           headers: {
@@ -60,7 +62,8 @@ export const UserProvider = ({ children }) => {
     try {
       // Ensure this points to the correct backend URL
       const response = await fetch(
-        "https://technigo-pluggin.onrender.com/users",
+        `${renderUrl}/users`,
+        // "https://technigo-pluggin.onrender.com/users",
         {
           method: "POST",
           headers: {
